@@ -20,17 +20,51 @@
               <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about">About</a>
+          
             </li>
             <li class="nav-item">
-                    <a class="nav-link" href="/services">Services</a>
+                   
                   </li>
+                  <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        Categories <span class="caret"></span>
+                    </a>
+    
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                     <ul style="text-color:#F5F8FA">
+                         <li>
+                             <h5 >Properties</h5>
+                        <ul>
+                            <li><a class="dropdown-item" href="{{route('test', 2)}}">Homes</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 3)}}">Shops</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 10)}}">Hostels</a></li>
+                        </ul>
+                    </li>
+                        <li>
+                            <h5>Vehicles</h5>
+                        <ul>
+                            <li><a class="dropdown-item" href="{{route('test', 6)}}">Car</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 8)}}">Bikes</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 9)}}">Busses</a></li>
+                        </ul>
+                    </li>
+                        <li>
+                            <h5>Services</h5>
+                        <ul>
+                            <li><a class="dropdown-item" href="{{route('test', 11)}}">Catering</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 12)}}">Dresses</a></li>
+                            <li><a class="dropdown-item" href="{{route('test', 13)}}">Events</a></li>
+                       </ul>
+                    </li>
+                    </ul>
+    
+                        
+                    </div>
+                </li>
+                
             <li class="nav-item">
               <a class="nav-link" href="/posts">Ads</a>
             </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="/categories">Categories</a>
-                    </li>
             
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -56,7 +90,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="/dashboard">Dashboard</a>
+                                    <a class="dropdown-item" href="/home">Home</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -68,8 +102,14 @@
                                     </form>
                                 </div>
                             </li>
+                            
                         @endguest
                     </ul>
+                    <form class="form-inline mt-2 mt-md-0" action="{{ action('PagesController@search') }}" method="get">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="a">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+          
                 </div>
             </div>
         </nav>

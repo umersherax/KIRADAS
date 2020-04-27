@@ -20,10 +20,15 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $categories=Category::all();
-        return view ('categories.index')->with('categories',$categories);
+        
+        $category=Category::find($id);
+     //   $name=Category::find($id);
+
+            return view('posts.index')->with('posts',$category->posts);
+       // $categories=Category::all();
+        //return view ('categories.index')->with('categories',$categories);
     }
 
     /**
@@ -33,11 +38,11 @@ class CategoriesController extends Controller
      */
     public function create()
     {
-        if (auth()->user()->credentials=="admin"){
+       
             return view('categories.create');
-        }
+        
             
-            return redirect('/categories')->with('error','Unauthorized Page');
+           
     }
 
     /**
@@ -69,11 +74,16 @@ class CategoriesController extends Controller
      */
     public function show($id)
     {
-        
+        if ($id==1)
+        {
+            $category=Category::find($id);
+        }
         $category=Category::find($id);
-        $name=Category::find($id);
+     //   $name=Category::find($id);
 
-            return view('categories.show')->with('posts',$category->posts);
+            return view('posts.index')->with('posts',$category->posts);
+        
+        
         
         
     }
@@ -110,5 +120,10 @@ class CategoriesController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function search(Request $request)
+    {
+        
+               
     }
 }

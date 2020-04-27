@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 Use App\User;
 Use App\post;
-use DB;
 
-class DashboardController extends Controller
+
+class HomeController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -16,7 +16,7 @@ class DashboardController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth'=>'verified']);
     }
 
     /**
@@ -28,17 +28,17 @@ class DashboardController extends Controller
     {
     
         $user_id=auth()->user()->id;
-        $user_credentials=auth()->user()->credentials;
-        if ($user_credentials=="user")
-        {
+       // $user_credentials=auth()->user()->credentials;
+       // if ($user_credentials=="user")
+       //// {
             $user=User::find($user_id);
-            return view('dashboard')->with('posts',$user->posts);
-        }
-        else if ($user_credentials=="admin")
-        {
-            $posts=post::get();
-            return view('dashboard')->with('posts',$posts);
-        }
+            return view('home')->with('posts',$user->posts);
+       //// }
+//else if ($user_credentials=="admin")
+       // {
+       //     $posts=post::get();
+       //     return view('home')->with('posts',$posts);
+        //}
         
     }
 }

@@ -26,5 +26,19 @@ class PagesController extends Controller
         $items = Category::all(['id', 'name','parent']);
     return view('pages.services', compact('items',$items));
     }
+
+    public function search(Request $request)
+    {
+
+        $a = $request->input('a');
+       // $posts=
+       $posts=Post::where('title','like','%'.$a.'%')->get();
+      
+       // return view ('posts.index', ['posts' => $posts]);
+        return view ('posts.index')->with('posts',$posts);
+      //  return redirect ('/posts', $posts);
+        
+            
+    }
     
 }

@@ -15,21 +15,17 @@
                     @endif
                     
                     
-                    <table class="table table-striped">
-                        <tr>
-                            <th>Title</th>
-                            <th></th>
-                            <th></th>
+                    
                             @foreach($posts as $post)
-                            <tr>
+                            
 
                                 <td><h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3></td>
                                 
-                            </tr>
+                            
                             
                             @endforeach
                             
-                        </tr>
+                        
                        
                 </div>
             </div>
