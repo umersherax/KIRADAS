@@ -12,7 +12,7 @@ class CategoriesController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['index','show']]);
+       
     }
 
     /**
@@ -20,13 +20,10 @@ class CategoriesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index()
     {
         
-        $category=Category::find($id);
-     //   $name=Category::find($id);
-
-            return view('posts.index')->with('posts',$category->posts);
+        
        // $categories=Category::all();
         //return view ('categories.index')->with('categories',$categories);
     }
