@@ -34,7 +34,7 @@ return [
     'google' => [
         'client_id' => ('808497671382-q10hq13q48hhsqnesbafo96omoejq0h5.apps.googleusercontent.com'),
         'client_secret' => ('pwv4gLUp5kzR8nZ3D5JOJNDk'),
-        'redirect' => 'http://localhost/login/google/callback',
+        'redirect' => 'http://protected-gorge-20657.herokuapp.com/login/google/callback',
     ],
 
 ];
