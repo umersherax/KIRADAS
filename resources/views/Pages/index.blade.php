@@ -28,7 +28,7 @@
                     <a href="/posts/{{$post->id}}">
                     <div class="card">
                         <a href="/posts/{{$post->id}}">
-                        <img class="card-img-top" src="/public/storage/cover_images/{{$post->cover_image}}" alt="Card image cap">
+                        <img class="card-img-top" src="public/storage/cover_images/{{$post->cover_image}}" alt="Card image cap">
                         <div class="card-body">
                         <h5 class="card-title">{{$post->title}}</h5>
                         <p class="card-text">{{$post->body}}</p>
