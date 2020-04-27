@@ -52,9 +52,9 @@
 <div class="dropdown">
         <button class="dropbtn" id="main">Category</button>
         <div class="dropdown-content">
-        <a href="#" id="Vehicles" onclick="fun(this.id)">vehicles</a>
-        <a href="#" id="Properties" onclick="fun(this.id)">Property</a>
-        <a href="#" id="Services" onclick="fun(this.id)">events</a>
+        <a href="#" id="Vehicles" onclick="fun(this.id)">Vehicles</a>
+        <a href="#" id="Properties" onclick="fun(this.id)">Properties</a>
+        <a href="#" id="Services" onclick="fun(this.id)">Services</a>
         </div>
 </div>
 
