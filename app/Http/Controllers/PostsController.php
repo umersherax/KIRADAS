@@ -146,8 +146,7 @@ class PostsController extends Controller
         $post->category_id = $get_cat_ID;
 
         //getting respective parent ID from cat table.
-        $get_parent_ID = Category::where('name', '=', $pst2)->value('id');
-        $post->parent = $get_parent_ID;
+     
         
         $post->num_of_portions = $request->input('num_of_portions');
         $post->user_id=auth()->user()->id;
