@@ -1,5 +1,3 @@
-alert('helli');
-
 function fun(id) {
     var x = id;
     document.getElementById('a2').value = x;
