@@ -1,5 +1,3 @@
-alert('helli');
-
 function fun(id) {
     var x = id;
     document.getElementById('a2').value = x;
@@ -14,7 +12,7 @@ function fun(id) {
     }
     if (x == 'Properties') {
 
-        document.getElementById('main').innerHTML = 'Property';
+        document.getElementById('main').innerHTML = 'Properties';
         document.getElementById('prop').style.display = "block";
         document.getElementById('veh').style.display = "none";
         document.getElementById('evnt').style.display = "none";
@@ -23,7 +21,7 @@ function fun(id) {
     }
     if (x == 'Services') {
 
-        document.getElementById('main').innerHTML = 'events';
+        document.getElementById('main').innerHTML = 'Services';
         document.getElementById('m_from').style.display = 'none';
         document.getElementById('evnt').style.display = "block";
         document.getElementById('veh').style.display = "none";
