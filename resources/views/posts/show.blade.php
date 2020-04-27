@@ -52,7 +52,7 @@ axe.run( function(err, results) {
             <a href="#" data-target="#modalIMG" data-toggle="modal" class="color-gray-darker c6 td-hover-none">
               <div class="ba-0 ds-1">
                 <img alt="Card image cap" class="card-img-top" style="height:250px;
-                width: 330px;" src="/storage/cover_images/{{$post->cover_image}}" />
+                width: 330px;" src="/storage/{{$post->cover_image}}" />
                 
               </div>	
             </a>
