@@ -4,12 +4,7 @@
 
 @section('content')
         <div class="jumbotron text-center">
-             <style>
-                 img {
-  height: 200px;
-  width: 300px;
-}
-                 </style>
+             
                 
                 <h3>Most Recent Ads</h3>
                 
